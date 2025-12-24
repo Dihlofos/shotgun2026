@@ -1,0 +1,159 @@
+.faq {
+  position: relative;
+  padding: 7.8rem 0 6rem;
+  z-index: 2;
+
+  @media (max-width: $tablet) {
+    padding: 4.3rem 0 6rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 2rem 0;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 3.5rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 2.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2rem;
+    }
+  }
+
+  &__accordeon {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &__item {
+    position: relative;
+    width: 100%;
+    margin: 0 0 1.9rem;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $grey;
+    color: $black;
+    transition: all 0.2s ease-in;
+
+    &.active {
+      background-color: $darkRed;
+      color: $white;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding: 0;
+      margin: 0 0 1.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0;
+      margin: 0 0 1.4rem;
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    color: inherit;
+    flex-direction: column;
+    font-family: $mossport;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 2.8rem 2.2rem 2.9rem 2.5rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: left;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+      padding: 2.5rem 6.4rem 2rem 2.4rem;
+      line-height: 1.4;
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+      padding: 2.4rem 6.4rem 2rem 2.6rem;
+      line-height: 1.4;
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    display: flex;
+    width: 3.2rem;
+    height: 3.2rem;
+
+
+    svg {
+      align-self: center;
+      transition: .2s transform ease-in-out;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+  }
+
+  &__content {
+    font-family: $gotham;
+    color: $white;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    text-align: left;
+    text-transform: none;
+    max-width: 80rem;
+    margin: 0;
+
+    a {
+      color: white;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
+
+    &.active {
+      max-height: 30rem;
+      opacity: 1;
+      padding: 1rem 0 0;
+
+      @media (max-width: $tablet) {
+        padding: 0.4rem 0 0;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 0.4rem 0 0;
+        max-height: 47rem;
+      }
+    }
+  }
+
+}

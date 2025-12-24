@@ -1,0 +1,221 @@
+.programm {
+  position: relative;
+  padding: 35rem 0 4rem;
+  margin-top: 5rem;
+  color: $white;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    padding: 28rem 0 4rem;
+  }
+
+  @media (max-width: $mobile) {
+    background-color: $purpler;
+    padding: 23rem 0 4rem;
+    margin-top: 7rem;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__top-circle {
+    position: absolute;
+    z-index: 5;
+    width: 286%;
+    height: 400rem;
+    top: 10rem;
+    left: -92.5%;
+    //transform: translateX(50%);
+    max-width: initial;
+    border-radius: 50%;
+    background-color: $purpler;
+
+    @media (max-width: $tablet) {
+      width: 419%;
+      height: 400rem;
+      top: 6rem;
+      left: -159%;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 6;
+  }
+
+  &__decor-left {
+    position: absolute;
+    z-index: 4;
+    top: -16rem;
+    left: -26rem;
+
+    @media (max-width: $tablet) {
+      width: 16rem;
+      height: 16rem;
+      top: -9rem;
+      left: -4.7rem;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__decor-right {
+    position: absolute;
+    z-index: 4;
+    bottom: -5.5rem;
+    right: -22.5rem;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -18.6rem;
+  }
+
+  &__circle {
+    margin: 0 0 2.6rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2.2rem;
+    }
+  }
+
+  &__title {
+    color: $white;
+    line-height: 1;
+    margin: 0 0 1.6rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 1.2rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__descr {
+    max-width: 62.2rem;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+      font-size: 1.6rem;
+      max-width: 50rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__tabs-actions {
+    display: flex;
+    justify-content: center;
+    margin: 4.2rem 0 3.8rem;
+
+    @media (max-width: $tablet) {
+      padding: 0 4rem 0 4rem;
+      margin: 3rem -4rem 2rem;
+      overflow-x: auto;
+      justify-content: flex-start;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin: 3rem -1.6rem 2rem;
+      padding: 0 1.6rem 0 1.6rem;
+
+    }
+  }
+
+  &__trigger {
+    border: none;
+    background-color: $white;
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: $purpler;
+    width: 22rem;
+    height: 5.8rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s opacity ease-in-out;
+    border-radius: 100px;
+
+    @media (max-width: $tablet) {
+      width: 22rem;
+      font-size: 1.4rem;
+      line-height: 1.3;
+      flex-shrink: 0;
+      height: 4.4rem;
+      padding: 0;
+
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.3rem;
+      height: 4rem;
+
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__warnings {
+    margin-top: 2rem;
+
+    max-width: 91.3rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    p:not(:last-child) {
+      margin: 0 0 1.5rem;
+    }
+  }
+
+
+
+
+
+
+}

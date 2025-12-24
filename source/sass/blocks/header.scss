@@ -1,0 +1,73 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.2rem;
+  background-color: $darkPurple;
+  z-index: 10;
+
+  .container {
+    height: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: -2.2rem;
+    gap: 1rem;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1.5rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__logo-dep {
+    width: 10rem;
+    height: 3.4rem;
+  }
+
+  &__logo-100 {
+    width: 10rem;
+    height: 3rem;
+  }
+
+  &__action {
+    height: 4.4rem;
+    width: 15.8rem;
+    min-width: 15.8rem;
+
+    //experiment
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
+    @media (min-width: $tablet) {
+      font-size: 2rem;
+
+      &:hover {
+        background-color: $red;
+        border-color: $red;
+        color: $white;
+      }
+
+    }
+  }
+
+
+
+}

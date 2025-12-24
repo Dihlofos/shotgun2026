@@ -1,0 +1,382 @@
+.hero {
+  position: relative;
+  z-index: 5;
+  background-color: $purpler;
+
+
+
+  @media (max-width: $tablet) {
+    padding: 7rem 0 15rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 7rem 0 17.3rem;
+  }
+
+  &--404 {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+    .hero__content {
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75rem;
+    }
+
+    @media (max-width: $tablet) {
+      padding: 0;
+
+      .container {
+        width: 50rem
+      }
+
+      .hero__bg {
+        bottom: -12.1rem;
+      }
+
+      .hero__content {
+        position: absolute;
+        width: 100%;
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0;
+
+      .hero__bg {
+        bottom: -6rem;
+      }
+
+      .hero__content {
+        position: absolute;
+        width: 100%;
+        padding: 2rem;
+      }
+
+    }
+  }
+
+  &__content {
+    position: absolute;
+    color: $white;
+    width: 100%;
+    top: 12.2rem;
+    left: 0;
+    width: auto;
+
+    @media (max-width: $tablet) {
+      position: relative;
+      top: 0;
+      z-index: 4;
+      padding: 3.4rem 0 0;
+    }
+
+    @media (max-width: $mobile) {
+      position: relative;
+      top: 0;
+      z-index: 4;
+      padding: 3.4rem 0 0;
+      width: 100%;
+    }
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    @media (max-width: $tablet) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: space-between;
+    //margin: 0 0 5.8rem;
+    margin: 0 0 6.4rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 2.3rem;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0 0 3.3rem;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    gap: 2.7rem;
+    margin: 0 0 6.3rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 7rem;
+      gap: 1.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 5.8rem;
+    }
+  }
+
+  &__start-text {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    line-height: 1.4;
+    color: $darkRed;
+    margin: 0 0 2rem;
+
+    @media (max-width: $tablet) {
+      font-size: 2.3rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
+  }
+
+  &__location {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: $white;
+    text-decoration: none;
+
+    @media (max-width: $tablet) {
+      font-family: $mossport;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: $mobile) {
+      font-family: $mossport;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__sports {
+    display: flex;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-size: 2rem;
+    color: $white;
+
+    i {
+      display: inline-block;
+      font-style: normal;
+      margin: 0 1.6rem;
+    }
+
+    @media (max-width: $tablet) {
+      font-family: $mossport;
+      font-size: 2rem;
+      margin: 0 0 3.3rem;
+
+      i {
+        margin: 0 1.78rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-family: $mossport;
+      font-size: 1.8rem;
+      margin: 0 0 3.3rem;
+
+      i {
+        margin: 0 1.78rem;
+      }
+    }
+  }
+
+  &__main-title {
+    font-family: $mossport;
+    font-size: 11rem;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: $tablet) {
+      font-size: 7rem;
+      margin: 0 0 1rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 4.8rem;
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__tablet-decor {
+    display: none;
+    position: absolute;
+    top: 7rem;
+    right: -0.2rem;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__mobile-decor {
+    display: none;
+    position: absolute;
+    top: 6.5rem;
+    right: -6.2rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+
+  &__bg {
+    margin: 0 0 -27.2rem 6rem;
+    max-width: initial;
+    width: 135%;
+    min-width: 135%;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+    }
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      bottom: -27.1rem;
+      left: 50.4%;
+      width: 80.1rem;
+      min-width: 80.1rem;
+      max-width: initial;
+      margin: 0;
+      transform: translateX(-50%);
+      z-index: 2;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+
+    @media (max-width: $mobile) {
+      position: absolute;
+      bottom: -23.2rem;
+      left: 66%;
+      width: 61.3rem;
+      min-width: 61.3rem;
+      max-width: initial;
+      margin: 0;
+      transform: translateX(-50%);
+      z-index: 2;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+
+
+  }
+
+
+  &__register {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    gap: 2rem;
+    margin-left: -2rem;
+
+    .button {
+      position: relative;
+      z-index: 2;
+      height: 5rem;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 2000rem;
+      height: 100%;
+      background-color: $darkRed;
+      z-index: 1;
+      border-radius: 20px;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+      font-family: $mossport;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    @media (max-width: $tablet) {
+      gap: 2rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+  }
+
+  &__prize {
+    position: relative;
+    z-index: 2;
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1;
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+    }
+
+  }
+}

@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+.vscode
+*.ai
+*.log
+*.psd
+*.sublime*
+./send-form.php
+
+node_modules/
+npm-debug.*
+Thumbs.db

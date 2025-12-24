@@ -1,0 +1,291 @@
+.white-popup-block {
+    background: #FFF;
+    text-align: left;
+    max-width: 580px;
+    margin: 40px auto;
+    position: relative;
+    height: 660px;
+    border-radius: 20px;
+}
+.form-popup__title{
+    color: #333;
+    font-family: Mossport;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 50px 50px 20px;
+    line-height: 64px;
+}
+.form-popup__title span{
+    font-size: 44px;
+}
+button.mfp-close{
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23E6313F'/%3E%3Cpath d='M28 16L16 28' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 16L28 28' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    top: 20px;
+    right: 20px;
+    color: transparent!important;
+    opacity: 1;
+}
+.mfp-close:active {
+    top: 20px;
+}
+.form-popup__scroll{
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.form-popup__scroll::-webkit-scrollbar {
+    width: 4px;               /* ширина scrollbar */
+  }
+  .form-popup__scroll::-webkit-scrollbar-track {
+    background: transparent;        /* цвет дорожки */
+  }
+  .form-popup__scroll::-webkit-scrollbar-thumb {
+    background-color: #E6313F;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+  }
+.form-popup__scroll > div{
+    margin: 0 46px 0 50px;
+    margin-bottom: 12px;
+}
+
+#form-popup input {
+    line-height: 140%;
+    border-radius: 12px;
+    background: #F9F9F9;
+    padding: 14px 16px;
+    font-size: 14px;
+    background-color: #F8F8F8;
+    width: 100%;
+    border: none;
+
+    outline: none;
+}
+#form-popup input:active {
+    border: none;
+}
+
+#form-popup label {
+    line-height: 140%;
+    font-size: 14px;
+
+    outline: none;
+}
+
+#form-popup select {
+    position: relative;
+    line-height: 140%;
+    border-radius: 12px;
+    background: #F9F9F9;
+    padding: 14px 14px;
+    font-size: 14px;
+    background-color: #F8F8F8;
+    width: 100%;
+    border: none;
+
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: 1;
+}
+
+#form-popup select:active {
+    border: none;
+}
+.form-popup__select{
+    position: relative;
+}
+.form-popup__select::after {
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23B5B5B5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    content: '';
+    width: 20px;
+    height: 20px;
+    right: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+    /* для элемента input c type="checkbox" */
+    .checkbox{
+        position: relative;
+    }
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        width: 16px!important;
+    height: 28px;
+      }
+
+      /* для элемента label, связанного с .custom-checkbox */
+      .custom-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+      }
+
+      /* создание в label псевдоэлемента before со следующими стилями */
+      .custom-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        border-radius: 2px;
+        border: 2px solid #3F348E;
+      }
+
+      /* стили при наведении курсора на checkbox */
+      .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+        border-color: #3F348E;
+      }
+
+      /* стили для активного чекбокса (при нажатии на него) */
+      .custom-checkbox:not(:disabled):active+label::before {
+        background-color: #3F348E;
+        border-color: #3F348E;
+      }
+
+      /* стили для чекбокса, находящегося в фокусе */
+      /*
+      .custom-checkbox:focus+label::before {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }*/
+
+      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+      .custom-checkbox:focus:not(:checked)+label::before {
+        border-color: #3F348E;
+      }
+
+      /* стили для чекбокса, находящегося в состоянии checked */
+      .custom-checkbox:checked+label::before {
+        border-color: #3F348E;
+        background-color: #3F348E;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.3332 4L5.99984 11.3333L2.6665 8' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+
+      /* стили для чекбокса, находящегося в состоянии disabled */
+      .custom-checkbox:disabled+label::before {
+        background-color: #e9ecef;
+      }
+
+      .form-popup {
+        font-family: "GothamPro";
+      }
+
+      .form-popup__small-text{
+        color: #C8C8C8;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 24px;
+      }
+
+      .form-popup__btn button{
+        border-radius: 10px;
+        background: #E62E3E;
+        color: #FFF;
+        text-align: center;
+        font-family: Mossport;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 10px 20px 8px 20px;
+        outline: none;
+        width: 100%;
+        border: none;
+        margin-top: 0;
+      }
+
+      div.margin-bottom {
+        margin-bottom: 40px !important;
+      }
+
+      .form-popup__btn button:hover{
+        cursor: pointer;
+      }
+
+      .form-popup__btn--small button {
+        background: #342983
+      }
+
+      .air-datepicker-global-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+    }
+    .form-popup__scroll{
+        display: none;
+    }
+    .form-popup__scroll.show{
+        display: block;
+    }
+    .form-popup__text{
+        color: #333;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    .open-popup img{
+        width: 100%;
+        max-width: 580px;
+    }
+    .form-popup__mt{
+      margin-top: 24px!important;
+    }
+    .disable-input{
+      color: #B5B5B5;
+    }
+
+    @media (max-width: 768px) {
+        .form-popup__title{
+            font-size: 40px;
+            line-height: 40px;
+            padding: 50px 16px 20px;
+        }
+        .form-popup__title span{
+            font-size: 30px;
+        }
+        .form-popup__scroll > div{
+            margin: 0 12px 0 16px;
+            margin-bottom: 12px;
+        }
+        .form-popup__scroll {
+          max-height: calc(100vh - 130px);
+        }
+        .white-popup-block {
+          height: 100%;
+          border-radius: 0;
+          margin: 0;
+        }
+        .mfp-auto-cursor .mfp-content {
+          height: 100%;
+        }
+        .mfp-container {
+          padding: 0;
+        }
+        .mfp-wrap{
+          top: 0!important;
+          position: fixed!important;
+        }
+    }

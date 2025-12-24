@@ -1,0 +1,174 @@
+.partners {
+  padding: 4.8rem 0 5rem;
+
+  @media (max-width: $tablet) {
+    padding: 0 0 5rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 6.5rem 0 5rem;
+  }
+
+  &__title {
+    margin: 0 0 5rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 3rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2.2rem;
+    }
+
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: $logos;
+    transition: color .2s ease-in-out;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 0.2s ease-in;
+
+    }
+    .svg-gray {
+      opacity: 1;
+    }
+
+    .svg-colored {
+      opacity: 0;
+    }
+
+    &:hover {
+      .svg-gray {
+        opacity: 0;
+      }
+
+      .svg-colored {
+        opacity: 1;
+      }
+    }
+
+    &--dep {
+      width: 32.3rem;
+      height: 11rem;
+    }
+
+    &--mossport {
+      width: 35.7rem;
+      height: 11rem;
+    }
+
+    &--federation{
+      width: 38.1rem;
+      height: 10.1rem;
+    }
+
+    &--sportclub{
+      width: 39.6rem;
+      height: 10rem;
+    }
+
+    @media (max-width: $tablet) {
+      .svg-gray {
+        opacity: 0;
+      }
+
+      .svg-colored {
+        opacity: 1;
+      }
+
+      &--dep {
+        width: 24.6rem;
+        height: 8.3rem;
+      }
+
+      &--mossport {
+        width: 27.3rem;
+        height: 8.3rem;
+      }
+
+      &--federation{
+        width: 29.1rem;
+        height: 7.7rem;
+      }
+
+      &--sportclub{
+        width: 30.2rem;
+        height: 7.6rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+
+      &--dep {
+        width: 17.8rem;
+        height: 6rem;
+      }
+
+      &--mossport {
+        width: 19.8rem;
+        height: 6rem;
+      }
+
+      &--federation{
+        width: 20.9rem;
+        height: 5.5rem;
+      }
+
+      &--sportclub{
+        width: 20rem;
+        height: 5.4rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16.8rem;
+    margin: 0 0 7rem;
+
+    @media (max-width: $tablet) {
+      padding: 0 1rem 0 2rem;
+      gap: 2rem;
+      justify-content: space-between;
+      margin: 0 0 5.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3.3rem;
+      margin: 0 0 3.3rem;
+      padding: 0;
+    }
+
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15.2rem;
+
+    @media (max-width: $tablet) {
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3.3rem;
+    }
+  }
+}

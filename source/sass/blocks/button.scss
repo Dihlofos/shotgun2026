@@ -1,0 +1,105 @@
+.button {
+    display: inline-flex;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkRed;
+    font-family: $mossport;
+    text-transform: uppercase;
+    color: $white;
+    padding: 1rem 2rem;
+    margin: 0;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: normal;
+    min-width: 17.8rem;
+    text-align: center;
+    border: 2px solid $darkRed;
+    transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out, 0.2s border-color ease-in-out;
+    cursor: pointer;
+
+    //experiment
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
+    &.disabled {
+      background-color: #B0B0B0;
+      border-color: #B0B0B0;
+      cursor: not-allowed;
+      pointer-events: none;
+      color: $white;
+    }
+
+    &:hover,
+    &:active {
+        border-color: $purpler;
+        background-color: $purpler;
+        color: $white;
+    }
+
+    @media (max-width: $tablet) {
+      &:hover,
+      &:active {
+        background-color: $darkRed;
+        color: $white;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+      padding: 1.1rem;
+      height: 6rem;
+    }
+
+    &--white {
+      background-color: $white;
+      border-color: $white;
+      color: $darkRed;
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+        border-color: $white;
+        color: $white;
+
+          @media (max-width: $tablet) {
+            background-color: $white;
+            color: $darkRed;
+          }
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--white-red {
+      background-color: $white;
+      border-color: $darkRed;
+      color: $darkRed;
+
+      &:hover,
+      &:active {
+        border-color: $darkRed;
+        background-color: $darkRed;
+        color: $white;
+
+          @media (max-width: $tablet) {
+            background-color: $white;
+            border-color: $darkRed;
+            color: $darkRed;
+          }
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--big {
+      font-size: 3rem;
+    }
+
+}

@@ -1,0 +1,188 @@
+.sports {
+  position: relative;
+  z-index: 7;
+
+  &__title {
+    @media (max-width: $mobile) {
+      margin: 0 0 3rem;
+    }
+
+  }
+
+  &__description {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 4rem 3rem;
+    box-shadow: 0px 0px 30px 0px rgba(31, 31, 31, 0.06);
+    margin: 0 0 2rem;
+    font-size: 1.7rem;
+    line-height: 1.4;
+
+    ul {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p:not(:last-child) {
+      margin: 0 0 1rem;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 1.6rem;
+      line-height: 1.4;
+      padding: 3.5rem 2rem 3.5rem 2rem;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      font-size: 1.4rem;
+      padding: 2.4rem 1.6rem;
+    }
+  }
+
+  &__description-left {
+    width: 40%;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__description-right {
+    width: 55%;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 21rem;
+    &:hover {
+      background-color: $white;
+      color: $darkRed
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 0 2.4rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 1.5rem;
+    }
+  }
+
+  &__block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    height: 100%;
+  }
+
+  &__block {
+    position: relative;
+    border-radius: 20px;
+    padding: 3rem 3rem 3rem 3rem;
+    width: calc(50% - 1rem);
+    color: $white;
+
+    @media (max-width: $tablet) {
+      padding: 2rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      padding: 1.6rem;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $darkRed;
+      border-radius: 20px;
+      transition: 0.2s transform ease-in;
+    }
+
+    &:hover {
+      &:before {
+        transform: scale(1.04,1.08);
+
+        @media (max-width: $mobile) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &__block-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 0 0 1rem;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+      font-size: 2.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__block-text {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    margin: 0 0;
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 0 0 1.4rem;
+    }
+  }
+
+  &__warning {
+    font-size: 1.6rem;
+    line-height: 1.4;
+
+    a {
+      color: $darkRed;
+      text-decoration: none;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: $lightRed;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
+
+
+}
